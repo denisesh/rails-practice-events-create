@@ -1,0 +1,41 @@
+ <table class="table">
+     <thead>
+        <tr>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Id Required</th>
+          <th>Capacity</th>
+          <th>Directions  </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td>
+              <%= event.description %>
+            </td>
+            <td>
+              <%= event.date %>
+            </td>
+            <td>
+              <%= event.requires_id %>
+            </td>
+            <td>
+              <%= event.capacity %>
+            </td>
+            <td>
+              <%= event.directions %>
+            </td>
+          
+          </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+<% @events.each do |event| %>
+
+<% end %>
+
+
+<%= link_to "New Event", new_event_path %>
