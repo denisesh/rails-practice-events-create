@@ -1,0 +1,21 @@
+Edit an Event
+
+<%= form_for @event do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date%>
+
+  <%= f.label :description%>
+  <%= f.text_field :description%>
+
+  <%= f.label "ID Required" %>
+  <%= f.check_box :requires_id %>
+
+  <%= f.label :capacity%>
+  <%= f.number_field :capacity%>
+
+  <%= f.label :directions%>
+  <%= f.text_area :directions%>
+
+  <%= f.submit %>
+
+<%end%>

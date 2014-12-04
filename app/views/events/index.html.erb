@@ -6,6 +6,7 @@
           <th>Id Required</th>
           <th>Capacity</th>
           <th>Directions  </th>
+          <th> LINKS </th>
         </tr>
       </thead>
       <tbody>
@@ -28,6 +29,7 @@
             </td>
             <td>
               <%= link_to "Edit", edit_event_path(event) %>
+              <%= link_to "Delete", event_path(event), method: :delete, data:{confirm: "really?"} %>
             </td>
           </tr>
         <% end %>
